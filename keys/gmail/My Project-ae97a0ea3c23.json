@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "rock-perception-285715",
+  "private_key_id": "ae97a0ea3c235803370691aa8fa60f4e0e9057cd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCm7I8TxLjKcl3L\nM2FGIeoSfD300J95GKB80JHpZZa7iIRH4a4I13frGv1znCFGiFbF2fNVZOU9zcyA\n9416gnl1ldLwU1P6R/d8cuOJVCKti1lY2HYhAlFo5tgruSpAr9e66LG4sDdaQSfO\nPXcSNw/ei/bzkLe+GRakgZz2gbr1+dESrbsFRRL9VeHtfb/GwPXNQBuS+CMbKV7k\nUI171Nk7w9j85l7ZSAg8eKmfnpYVSuy1T0d9Yh3O0OqNEE/bCSY57abfa8564m9Y\nkOtoU1lKdvRJEMwkcgjx7XctKzoikKltQaNVaEBOiV5AfxCxLaosLxofItM419TM\n/NSFEjhHAgMBAAECggEAFGjh46O5iSirrDVM5Fja4xtlg0ILmwW2Vcc2GAi6V0AN\nazE+aMlZBG+ejsddJYp1EFL3rDjJHiHu1SlaQfZNveFYUyyKcj82FPWCjwoxBUbV\nDAZyMdNekIotOJy20bBOcIWUJAYJIT7MjFc6mwkNe9i26g1cp2CE7WSwWaRUxPoY\nZ+C0X2ARU14HWUoYFCCoxC047FgV12ONigPi2ryfSofBmNrUv0E8gIJLzbC+O6Be\nst8m6TQoXWbUZtkT1y+qIMRvoqZ1AT5uUNxu0z7gL56+MskMy+3LG5a09ZrmCr/L\nRGd5m9A9kuvv2SbXyjm+5P7VUwjpZjcJMnOKL9bWvQKBgQDhO5SZ2b6vIbGBeEGM\n32rHx9pTicP6XshT9mkMljqdgnKznCbwiZXTRuLbC52uD7qmDqYMzaiyXoi253oU\nID9ILn483svqNugdOrM50Y3ZwiiteoVLSMLLUKkc/FDNXjlJn2RhQVOJBt7Ih3H3\nOF3fAYoqeNR6vrHXMFF8MFe84wKBgQC9uep+i2E5NdLb1Ccba6kbprdowCqVvyFD\nEGeTAHc2c/k9Fa3QYGJEJzNd8U9QJdqTRkZu97iPa47pubg++B3lH4nq5Zl0YnPP\nQC4i/cN3ZCzt5XAfLfkPNXNMKUlFu6733LpjGPfnKJuXx9eQFHFB4tnlDXkCF7RZ\n5zYHmox4TQKBgD5yAF8vaZiwpMAakUH3Z2mAVV234mf2A2CT/sgIlrO4yQhXEMy7\nuJhdHORSMiNiJQOJKCyAkHbzkr/zKXuO/TyL91/0/WAwXOZNsgcjvEpVdGW0hGQ9\nBhTMhjaNFfH6X7Ozx2bXb8ub5gR+2PAL5qq/iIkB+xcU68WXld/yn0C1AoGBAJ+8\nDLK4FIX/S+Uq7DYI4ZrXNWnrCK+E+LMm95zrcnMVF02Xl/xtea5ZtsSsKxOWmz0N\nmLVKuUd+zhb39yiE616BvDNZVWaIkWp3ZaCuOEinvbAZUNnfceadINKJnBgq2Tfz\nzbUrS2SCauVSKqoym9xV6xAO1MevP3fF01Z5hzStAoGBAITtRavKaFFVlFCD71LS\nP8v9QmN9mLGXm8PqX+FG8PE68l52ASunMY71CEqbpbbycRCayZKnG3E7kGVmrWHn\nYqMfPhlsskypyyeG2HfY0OgN1tT+K64z3iI7vOspHzeQsEkdXoJy0OsPlEgJVPB2\niN6AjDHaZdLx7rI0XgbNkQQd\n-----END PRIVATE KEY-----\n",
+  "client_email": "trading-mail-list@rock-perception-285715.iam.gserviceaccount.com",
+  "client_id": "102945082075776318864",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/trading-mail-list%40rock-perception-285715.iam.gserviceaccount.com"
+}

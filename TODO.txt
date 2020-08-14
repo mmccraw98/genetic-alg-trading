@@ -1,0 +1,61 @@
+IMMEDIATE IMPORTANCE:
+LOOKBACK BIAS PROTECTION -> MAKE SURE DATA IS 'AVAILABLE' IN SIMULATION ENVIRONMENTS WHEN WE WOULD GAIN ACCESS TO IT IN REAL LIFE
+EXPAND DATA OUTLETS TO INCLUDE RELIABLE FUNDAMENTAL FINANCIALS, SENTIMENT, NEWS MENTIONS, AND CLASSIC TECHNICAL INDICATORS (200 DAY MA 20 DAY MA ...), INDUSTRY, AND SECTOR, AND NEXT_EARNINGS!!!!!!!!!!
+
+STOCKTWITS / TWITTER / DISCORD CHAT MONITORING IS ESSENTIAL
+
+Bank of america API to access personal financials
+
+Divide data by industry (sector), add column in df from the yahoo finance get analyst recommendation function
+
+Update Script
+Add in the greeks and other financial metrics (fundamental and technical)
+Add in news sentiment and news intensity (publication frequency)
+Add more companies?
+Reliable data source for other data entries
+NEURAL NETWORK FORECASTING
+
+Dimensionality reduction (clustering) to find the companies which behave similarly for large periods of time
+Find the characteristics by which clearly defined clusters emerge so that companies can be grouped by behaviors
+
+Change name of file to something more general and indicative of an API
+
+Work on tree training
+Fix pruning
+Add mutation parameters and mutation scheme parameters (1, 2, 3) to params file
+Make a faster simulation function
+Add the greeks and other financial metrics  to simulation function
+Make faster predict function
+Segment all the financial data by sector, price
+
+Add in backtesting environment
+Add in functions to calculate the greeks and other metrics
+
+Add in trading environment with trading API and test
+Make very general
+Keep a log of every trade made
+
+Update paths to be all relative and use the path.join function or whatever else is necessary to make this work on any OS
+
+Get an automated mailing list
+Put all emails into a text file
+Mail attachments
+Create automated news broadcast
+
+Get discord and twitter data
+
+Change all folders to lowercase names
+
+study effect of earnings reports, building, during, and after on various companies
+could be worth buying low caps a month before earnings and holding until the day before or day of then shorting?
+
+Test training procedure
+Automate training on a large set and then compare performance if you segment and hot start -> find best training methods
+Couple indicators and thresholds to have standard values
+create parameter meshes which become finer and more narrow in scope as training performance increases
+
+REDO ENTIRE FILE STRUCTURE AND MAKE PACKAGES / MODULES / LIBRARIES?
+
+MAKE GUI
+
+make a server so can check progress remotely

@@ -1,6 +1,7 @@
 @echo off
 
 set use_hs_yn=n
+set specifiy_uni_yn=n
 
 :BEGIN
 set /p default_yn="Use default parameters? (y/n). . ."
@@ -16,7 +17,7 @@ if %default_yn% == y (
 	set param5=5
 	set param7=None
 
-	echo Working Directory:
+	echo Enter a Training ID:
 	set /p param6=""
 	
 	goto :START
@@ -33,7 +34,7 @@ cls
 
 if %use_hs_yn% == y (
 	
-	echo Enter directory for hot start protocol:
+	echo Enter a Training ID for hot start protocol: (name of file from which pre-existing models are drawn)
 	set /p param7=""
 	cls
 	goto :CHOOSE
@@ -50,60 +51,79 @@ if %use_hs_yn% == y (
 )
 
 :CHOOSE
-echo Configure Parameters! F-Size: [] U-Size: [] T-Low: [] T-Up: [] Num-Gen: [] Dir: []
-echo Forest Size:
-set /p param1=""
 
-cls
-echo Configure Parameters! F-Size: [%param1%] U-Size: [] T-Low: [] T-Up: [] Num-Gen: [] Dir: []
-
-echo Universe Size:
-set /p param2=""
-
-cls
-echo Configure Parameters! F-Size: [%param1%] U-Size: [%param2%] T-Low: [] T-Up: [] Num-Gen: [] Dir: []
-
-echo Tree Size - Lower Bound:
-set /p param3=""
-
-cls
-echo Configure Parameters! F-Size: [%param1%] U-Size: [%param2%] T-Low: [%param3%] T-Up: [] Num-Gen: [] Dir: []
-
-echo Tree Size - Upper Bound:
-set /p param4=""
-
-cls
-echo Configure Parameters! F-Size: [%param1%] U-Size: [%param2%] T-Low: [%param3%] T-Up: [%param4%] Num-Gen: [] Dir: []
-
-echo Number of Generations to Simulate:
-set /p param5=""
-
-cls
-echo Configure Parameters! F-Size: [%param1%] U-Size: [%param2%] T-Low: [%param3%] T-Up: [%param4%] Num-Gen: [%param5%] Dir: []
-
-echo Working Directory:
+echo Please enter parameters:
+echo Enter a Training ID: (will serve as identifying label for generated models and statistics)
 set /p param6=""
+cls
+
+echo Please enter parameters:
+echo Define the number of models per generation: (forest size)
+set /p param1=""
+cls
+
+echo Please enter parameters:
+echo Define the LOWER limit on model size: (min. number of nodes)
+set /p param3=""
+cls
+
+echo Please enter parameters:
+echo Define the UPPER limit on model size: (max. number of nodes)
+set /p param4=""
+cls
+
+echo Please enter parameters:
+echo Define the number of assets in the training environment: (universe size)
+set /p param2=""
+cls
+
+echo Please enter parameters:
+echo Define the number of generations to simulate: 
+set /p param5=""
+cls
 
 :START
+
+:SPECIFIC
+set /p specifiy_uni_yn="Specify assets in training environment? (y/n). . ."
+echo %specifiy_uni_yn%
 cls
+
+if %specifiy_uni_yn% == y (
+	echo Please enter directory containing the desired assets for training:
+	set /p %param8%=""
+	cls
+) else if %specifiy_uni_yn% == n (
+	echo The group of assets will be randomly drawn from the financial database
+	set %param8%=None
+	cls
+) else (
+	echo Missunderstood entry: %specifiy_uni_yn%, please entry y or n. . .
+	goto :SPECIFIC
+)
+cls
+
+
 echo Summary:
 echo A forest of %param1% trees, each with sizes between %param3% and %param4% nodes, will be trained on %param2% randomized 
 echo assets for %param5% generations.
-echo The intermediate and final results will be saved to: %param6%
+echo The intermediate and final results will be saved under the Training ID: %param6%
 if %use_hs_yn% == y (
 	
-	echo Hot start protocol will be used, drawing models from: %param7%
+	echo Hot start protocol will be used, drawing models from the Training ID: %param7%
 
 )
+
+echo %param8%
 
 pause
 
-"C:\Users\PC\PycharmProjects\untitled\venv\Scripts\python.exe" "C:\Users\PC\PycharmProjects\Finance\venv\initialize_training.py" --forestsize %param1% --universesize %param2% --treelower %param3% --treeupper %param4% --numgen %param5% --dir %param6% --hot_start %param7%
+"C:\Users\PC\PycharmProjects\untitled\venv\Scripts\python.exe" "C:\Users\PC\PycharmProjects\SelfGenAlg\initialize_training.py" --forestsize %param1% --universesize %param2% --treelower %param3% --treeupper %param4% --numgen %param5% --dir %param6% --hot_start %param7% --specify %param8%
 
 
-set /a count = %param5%
-for /l %%x in (1, 1, %count%) do (
-	"C:\Users\PC\PycharmProjects\untitled\venv\Scripts\python.exe" "C:\Users\PC\PycharmProjects\Finance\venv\train_generations.py" --dir %param6% --iter %%x
-)
+::set /a count = %param5%
+::for /l %%x in (1, 1, %count%) do (
+::	"C:\Users\PC\PycharmProjects\untitled\venv\Scripts\python.exe" "C:\Users\PC\PycharmProjects\SelfGenAlg\train_generations.py" --dir %param6% --iter %%x
+::)
 
 pause
